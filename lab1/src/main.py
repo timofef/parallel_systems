@@ -45,18 +45,17 @@ def main():
     B = get_vertices_degrees_matrix(A)
     L = B - A
 
-    print(A)
-    print(B)
-    print(L)
-
     eigen_values, eigen_vectors = get_eigen(L)
+
+    np.set_printoptions(precision=4, suppress=True, linewidth=np.inf)
+    print("Собственные значения:\n", eigen_values)
+    print("Собственные векторы:\n", eigen_vectors)
 
     a = []
     b = []
     t = np.array([eigen_vectors[i][1] for i in range(len(eigen_vectors))])
     avg = np.average(t)
-    print(eigen_values)
-    print(eigen_vectors)
+    print(t)
 
     for i in range(len(t)):
         if t[i] < avg:
