@@ -116,9 +116,9 @@ double s2_asimp(int n) {
 }
 
 int main() {
-    int n[6] = {2,4,8,16,32, 64};
+    int n[8] = {2,4,8,16,32, 64, 128, 256};
 
-    printf("S1 a=%f c_f=%f\n", a, c_f_1);
+    /*printf("S1 a=%f c_f=%f\n", a, c_f_1);
     for (int i = 0; i < 6; i++) {
         printf("%d %.2f\n", n[i], s1(n[i], c_f_1));
     }
@@ -138,29 +138,29 @@ int main() {
     for (int i = 0; i < 6; i++) {
         printf("%d %.2f\n", n[i], s1_asimp(n[i]));
     }
-    printf("\n");
+    printf("\n");*/
 
 
 
     printf("S2 a=%f c_f=%f\n", a, c_f_1);
-    for (int i = 0; i < 6; i++) {
-        printf("%d %.2f\n", n[i], s2(n[i], c_f_1));
+    for (int i = 0; i < 8; i++) {
+        printf("%d %f\n", n[i], s2(n[i], c_f_1));
     }
     printf("\n");
-    printf("S2 asimp c_f=%f\n", c_f_1);
-    for (int i = 0; i < 6; i++) {
+    /*printf("S2 asimp c_f=%f\n", c_f_1);
+    for (int i = 0; i < 8; i++) {
         printf("%d %.2f\n", n[i], s2_asimp(n[i]));
-    }
+    }*/
 
     printf("S2 a=%f c_f=%f\n", a, c_f_2);
-    for (int i = 0; i < 6; i++) {
-        printf("%d %.2f\n", n[i], s2(n[i], c_f_2));
+    for (int i = 0; i < 8; i++) {
+        printf("%d %f\n", n[i], s2(n[i], c_f_2));
     }
-    printf("\n");
+    /*printf("\n");
     printf("S2 asimp c_f=%f\n", c_f_1);
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 8; i++) {
         printf("%d %.2f\n", n[i], s2_asimp(n[i]));
-    }
+    }*/
 
     return 0;
 }
